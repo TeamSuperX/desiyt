@@ -19,16 +19,6 @@ Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
 ➥ Bot Server: <a href='https://heroku.com'>Heroku</a>
 ➥ Build Status: v2.0. [ Beta ]"""
 
-
-
-
-
-
-
-
-
-
-
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Dingdi will respond whenever a keyword is found the message
