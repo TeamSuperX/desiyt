@@ -101,7 +101,7 @@ async def who_is(client, message):
             message=chat_photo.big_file_id
         )
         buttons = [[
-            InlineKeyboardButton('✗ close ✗', callback_data='close_data')
+            InlineKeyboardButton(' close ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -115,7 +115,7 @@ async def who_is(client, message):
         os.remove(local_user_photo)
     else:
         buttons = [[
-            InlineKeyboardButton('✗ close ✗', callback_data='close_data')
+            InlineKeyboardButton('🙅 close ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -158,13 +158,7 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
                     text=f"{imdb.get('title')} - {imdb.get('year')}",
                     url=imdb['url'],
                 )
-            ],
-            [
-                InlineKeyboardButton(
-                    text=f"Projects Channel",
-                    url="https://t.me/josprojects"
-                )
-            ],
+            ]
         ]
     message = quer_y.message.reply_to_message or quer_y.message
     if imdb:
